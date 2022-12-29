@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --background-color: rgb(205, 240, 234);
+    --primary: Black; 
+    --secondary: rgb(246, 198, 234);
+    --third: rgb(249, 249, 249);
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--primary);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0%; 
+    
+  }
+  
+  #rule-box {
+    background-color: var(--third);
+    width: 765px 10px;
+    border: solid var(--secondary);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 300px 525px;
+  }
+h1 {
+  text-align: center;
+}
+.text {
+  padding: 5px 40px;
+
+}
+ #start {
+  display: flex;
+  justify-content: center;
+
+ }
+
+ #start button {
+  border-radius: 10%;
+  border: solid 2px;
+  background-color: var(--secondary);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+ }
+
+ #start button:hover {
+  background-color: black;
+  color: rgb(249, 249, 249)
+ }
