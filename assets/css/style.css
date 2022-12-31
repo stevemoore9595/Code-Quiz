@@ -3,21 +3,78 @@
   }
 
   :root {
-    --background-color: rgb(205, 240, 234);
+    --background-color: rgb(110, 133, 183);
     --primary: Black; 
-    --secondary: rgb(246, 198, 234);
-    --third: rgb(249, 249, 249);
+    --secondary: rgb(248, 249, 215);
+    --third: rgb(178, 200, 223);
+    --fourth: rgb(177, 175, 255);
   }
 
   body {
     background-color: var(--background-color);
     color: var(--primary);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0%; 
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    border-radius: 5px;
+    box-shadow: 0 0 4px 4px;
+    background-color: var(--secondary);
+    padding: 20px;
+    margin: 300px 400px;
+    width: 800px;
+    height: 300px;
+  }
+
+  .btns-style {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     
   }
   
-  #rule-box {
+  .btn {
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--third);
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background-color: var(--fourth);
+  }
+
+  .btn.correct {
+    background-color: rgb(25, 194, 25);
+  }
+
+  .btn.incorrect {
+    background-color: rgb(252, 63, 63);
+  }
+ .start-btn, .next-btn {
+  padding: 5px 15px;
+  font-size: 25px;
+  font-weight: bold;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hide {
+    display: none
+  }
+ /* #rule-box {
     background-color: var(--third);
     width: 765px 10px;
     border: solid var(--secondary);

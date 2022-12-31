@@ -9,80 +9,21 @@
  </head>   
  
  <body>
-    <!-- Added header with the quiz code challenge rules-->
-    <header id="rule-box"> 
-        <h1><u>Code Quiz Challenge</u></h1>
-        <ul>
-           <ol class="text">- This is a timed multiple-choice quiz.</ol> 
-           <ol class="text">- You will have three minutes to complete the quiz.</ol> 
-           <ol class="text">- If you answer the question incorrectly,then time will be subtracted from the clock.</ol> 
-           <ol class="text">- Once you have answered all the questions or the timer reaches 0, then the quiz will be over.</ol>
-           <ol class="text">- You will then be able to see your results and save them along with your initials.</ol>
-        </ul>
-        <p id="start"><button>Take Quiz</button></p>
-    </header>
-
-    <main>
-        <!--Added first question-->
-        <section>
-            <div>
-                <h2>What is a Flex-box:</h2>
-                 <ul>
-                    <li>A box that you can bend</li>
-                    <li>A one-dimensional layout method for aranging items in rows or columns</li>
-                    <li>A CSS element that allows you to make the background of the page look like a box</li>
-                    <li>The name of the newest video game console</li>
-                 </ul>
-            </div>
-        </section>
-        <!--Added second question-->
-        <section>
-            <div>
-                <h2>What type of code is used to style a web-page:</h2>
-                 <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>CSS</li>
-                    <li>HTML</li>
-                 </ul>
-            </div>
-        </section>
-        <!--Added third question-->
-        <section>
-            <div>
-                <h2>What does WWW stand for:</h2>
-                 <ul>
-                    <li>World Wide Web</li>
-                    <li>While Women Work</li>
-                    <li>Work Work Work</li>
-                    <li>World War Weakenesses</li>
-                 </ul>
-            </div>
-        </section>
-        <!--Added fourth question-->
-        <section>
-            <div>
-                <h2>How is the string variable written:</h2>
-                 <ul>
-                    <li>var name: [Cole]</li>
-                    <li>var name: Cole</li>
-                    <li>var name: {Cole}</li>
-                    <li>var name: "Cole"</li>
-                 </ul>
-            </div>
-        </section>
-        <!--Added fifth question-->
-        <section>
-            <div>
-                <h2>What is GitHub:</h2>
-                 <ul>
-                    <li>It stores all your folders on the computer</li>
-                    <li>It is a club in Montana</li>
-                    <li>It is a for-profit copmpany offering a cloud-based repository that helps developers store, manage, track and contol changes to their repository</li>
-                    <li>A source-code editor made by Microsoft</li>
-                 </ul>
-            </div>
-        </section>
-    </main>
- </body></strong>
+   <div class="container">
+    <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-btns" class="btns-style">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+    </div>
+    <div class="buttons">
+      <button id="start-btn" class="start-btn btn">Start Quiz</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+  </div>
+   </div>
+   <script src="script.js"></script>
+ </body>
 </html>
