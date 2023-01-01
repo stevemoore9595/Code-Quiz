@@ -46,6 +46,7 @@
     background-color: var(--third);
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .btn:hover {
