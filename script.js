@@ -1,5 +1,6 @@
 const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById('question-container')
+const rulesElement = document.getElementById('rules')
 const questionElement = document.getElementById('question')
 const answerBtnsElement = document.getElementById('answer-btns')
 const nextBtn = document.getElementById('next-btn')
@@ -11,13 +12,19 @@ nextBtn.addEventListener('click', () => {
     setNextQuestion()
 })
 
+//function showRules(rules) {
+    
+    //showRules
+//}
 
 function startQuiz() {
-startButton.classList.add('hide')
-shuffledQuestions = questions.sort(() => Math.random() - .5)
-currentQuestionIndex = 0
-questionContainerElement.classList.remove('hide')
-setNextQuestion()
+    startButton.classList.add('hide')
+    rulesElement.innerText = rules.title
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContainerElement.classList.remove('hide')
+    setRules('rules')
+    setNextQuestion()
 }
 
 function setNextQuestion() {
@@ -77,6 +84,18 @@ function clearStatusClass(element) {
     element.classList.add('correct')
     //element.classList.add('incorrect')
 }
+
+const rules = [
+    {
+      title: 'Code Quiz Challenge', 
+      rules: [
+        { text: '- This is a timed multiple-choice quiz.'},
+        { text: '- You will have three minutes to complete the quiz.'},
+        { text: '- If you answer the question incorrectly,then time will be subtracted from the clock.'},
+        { text: '- Once you have answered all the questions or the timer reaches 0, then the quiz will be over'}
+      ]  
+    },
+]
 const questions = [
     {
       question: 'What is a Flex-box?',
