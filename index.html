@@ -10,18 +10,22 @@
  
  <body>
    <div class="container">
-    <div class="title">Code Quiz Challenge</div>
-    <div id="rules" class="rules-style"></div>
-    <div id="timer" class="timer-style">Time Left</div>
-    <div id="question-container" class="hide">
-      <h1 class="title"><u>Code Quiz Challenge</u></h1>
+    <!--<div class="title">Code Quiz Challenge</div>
+    <div id="rules" class="rules-style"></div>-->
+    
+    <div id="rules-hide"> 
+      <div class="title"><u>Code Quiz Challenge</u></div> 
         <ul>
            <ol class="rules">- This is a timed multiple-choice quiz.</ol> 
            <ol class="rules">- You will have three minutes to complete the quiz.</ol> 
            <ol class="rules">- If you answer the question incorrectly,then time will be subtracted from the clock.</ol> 
            <ol class="rules">- Once you have answered all the questions or the timer reaches 0, then the quiz will be over.</ol>
-           <ol class="text">- You will then be able to see your results and save them along with your initials.</ol>
+           <ol class="rules">- You will then be able to see your results and save them along with your initials.</ol>
         </ul>
+    </div>    
+    <div id="question-container" class="hide">
+    <div id="timer" class="timer-style">Time Remaining</div>
+
         <div id="question">Question</div>
         <div id="answer-btns" class="btns-style">
             <button class="btn">Answer 1</button>
@@ -34,7 +38,6 @@
     <div class="buttons">
       <button id="start-btn" class="start-btn btn">Start Quiz</button>
       <button id="next-btn" class="next-btn btn hide">Next</button>
-      <button></button>
     </div>
    </div>
    <script src="script.js"></script>

@@ -1,6 +1,6 @@
-/*const startButton = document.getElementById('start-btn')
+const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById('question-container')
-const rulesElement = document.getElementById('rules')
+const rulesHide = document.getElementById('rules-hide')
 const questionElement = document.getElementById('question')
 const answerBtnsElement = document.getElementById('answer-btns')
 const nextBtn = document.getElementById('next-btn')
@@ -9,6 +9,7 @@ const timeLimit = 30;
 let timeLeft = timeLimit;
  
 //Create timer function
+startButton.addEventListener('click', () => {
 const timer = setInterval(function() {
   timeLeft--;
   document.getElementById("timer").innerHTML = timeLeft;
@@ -17,6 +18,7 @@ const timer = setInterval(function() {
    alert("Time's up! Quiz ended.");
  }
 }, 1000);
+});
 
 let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startQuiz)
@@ -25,13 +27,8 @@ nextBtn.addEventListener('click', () => {
     setNextQuestion()
 })
 
-//function showRules(rules) {
-    
-    //showRules
-//}
-
 function startQuiz() {
-    rulesElement.classList.add('hide')
+    rulesHide.classList.add('hide')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -97,17 +94,7 @@ function clearStatusClass(element) {
     //element.classList.add('incorrect')
 }
 
-const rules = [
-    {
-      title: 'Code Quiz Challenge', 
-      rules: [
-        { text: '- This is a timed multiple-choice quiz.'},
-        { text: '- You will have three minutes to complete the quiz.'},
-        { text: '- If you answer the question incorrectly,then time will be subtracted from the clock.'},
-        { text: '- Once you have answered all the questions or the timer reaches 0, then the quiz will be over'}
-      ]  
-    },
-]
+
 const questions = [
     {
       question: 'What is a Flex-box?',

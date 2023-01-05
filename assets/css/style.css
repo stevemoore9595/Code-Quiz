@@ -14,7 +14,7 @@
     background-color: var(--background-color);
     color: var(--primary);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     margin: 0; 
     padding: 0;
@@ -27,41 +27,45 @@
     border-radius: 5px;
     box-shadow: 0 0 4px 4px;
     background-color: var(--secondary);
-    padding: 20px;
-    margin: 300px 400px;
+    padding: 50px;
+    margin: 200px 300px;
     width: 800px;
-    height: 400px;
+    height: 500px;
   }
 
   .title {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 30px;
   }
 
-  .rules-style {
+  .rules {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 15px 2px 0px 0px;
   }
 
   .timer-style {
-    display: inline;
-  
+    display: flex;
+    justify-content: flex-end;
     padding: 10px;
-    margin: 15px;
-    border-radius: 5px;
+    margin: -15px 10px 20px 10px;
+    border-radius: 10px;
+    border-color: black;
     background-color: var(--third);
+    box-shadow: 10px;
+    font-size: 18px;
     
   }
 
   .btns-style {
+    margin: 15px;
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(2, auto);
-    
   }
   
   .btn {
@@ -99,7 +103,7 @@
   }
 
   .hide {
-    display: non
+    display: none;
   }
  /* #rule-box {
     background-color: var(--third);
