@@ -1,9 +1,22 @@
-const startButton = document.getElementById('start-btn')
+/*const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById('question-container')
 const rulesElement = document.getElementById('rules')
 const questionElement = document.getElementById('question')
 const answerBtnsElement = document.getElementById('answer-btns')
 const nextBtn = document.getElementById('next-btn')
+
+const timeLimit = 30;
+let timeLeft = timeLimit;
+ 
+//Create timer function
+const timer = setInterval(function() {
+  timeLeft--;
+  document.getElementById("timer").innerHTML = timeLeft;
+  if (timeLeft === 0) {
+    clearInterval(timer);
+   alert("Time's up! Quiz ended.");
+ }
+}, 1000);
 
 let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startQuiz)
@@ -18,12 +31,11 @@ nextBtn.addEventListener('click', () => {
 //}
 
 function startQuiz() {
+    rulesElement.classList.add('hide')
     startButton.classList.add('hide')
-    rulesElement.innerText = rules.title
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-    setRules('rules')
     setNextQuestion()
 }
 

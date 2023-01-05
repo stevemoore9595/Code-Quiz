@@ -23,13 +23,6 @@
     align-items: center;
   }
 
-  .rules-style {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-  }
-
   .container {
     border-radius: 5px;
     box-shadow: 0 0 4px 4px;
@@ -38,6 +31,30 @@
     margin: 300px 400px;
     width: 800px;
     height: 400px;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+
+  .rules-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .timer-style {
+    display: inline;
+  
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: var(--third);
+    
   }
 
   .btns-style {
@@ -82,7 +99,7 @@
   }
 
   .hide {
-    display: none
+    display: non
   }
  /* #rule-box {
     background-color: var(--third);
