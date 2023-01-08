@@ -8,7 +8,7 @@ const submitButton = document.getElementById('submit-btn')
 const quizForm = document.getElementById('quiz-form')
 const inputField = document.getElementById('input-feild')
 
-const timeLimit = 30;
+let timeLimit = 60;
 let timeLeft = timeLimit;
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
@@ -107,8 +107,11 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedBtn = e.target
-    const correct = selectedBtn.dataset.correct
-    //setStatusClass(document.body, correct)
+    let correct = selectedBtn.dataset.correct
+    console.log(correct)
+    if (typeof correct === "undefined") {
+        timeLeft -= 10
+    }
     Array.from(answerBtnsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -116,10 +119,8 @@ function selectAnswer(e) {
         nextBtn.classList.remove('hide')
     } else {
         questionContainerElement.classList.add('hide')
-
-        startButton.innerText = 'Results'
-        startButton.classList.remove('hide')
         submitButton.classList.remove('hide')
+        quizForm.classList.remove('hide')
     }
 }
 
@@ -143,6 +144,7 @@ function clearStatusClass(element) {
 
 //If key name 'highscores' is not found in local storage
 // then set the value for allHighscoreArr = []
+
 
 function saveResult() {
     //get initial from input field
@@ -170,7 +172,6 @@ startButton.addEventListener('click', () => {
         document.getElementById("timer").innerHTML = timeLeft;
         if (timeLeft === 0) {
             clearInterval(timer);
-            alert("Time's up! Quiz ended.");
         }
     }, 1000);
 });
