@@ -33,3 +33,5 @@ The deployed application can be found at this link:
 Please refer to the LICENSE in the repository
 
 ## Screenshot
+
+![screenshot-of-code-quiz](https://user-images.githubusercontent.com/38742748/211475171-5e8ca098-cdf5-46bc-911b-85618ad320b7.png)
