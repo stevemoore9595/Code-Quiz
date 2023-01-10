@@ -1,3 +1,4 @@
+//obtaining id elements from html
 const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById('question-container')
 const rulesHide = document.getElementById('rules-hide')
@@ -8,13 +9,15 @@ const submitButton = document.getElementById('submit-btn')
 const quizForm = document.getElementById('quiz-form')
 const inputField = document.getElementById('input-feild')
 
+//setting time limts and the score at 0 before starting the quiz
 let timeLimit = 60;
 let timeLeft = timeLimit;
 let shuffledQuestions, currentQuestionIndex;
-let score = 0;
+let score = 0
 
 let allHighscoresArr = JSON.parse(localStorage.getItem('highscores')) || [];
 
+//questions
 const questions = [
     {
         question: 'What is a Flex-box?',
@@ -67,7 +70,7 @@ const questions = [
     }
 ]
 
-
+//function for startQuiz
 function startQuiz() {
     rulesHide.classList.add('hide')
     startButton.classList.add('hide')
@@ -77,11 +80,13 @@ function startQuiz() {
     setNextQuestion()
 }
 
+//function for setNextQuestion
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+//function for showQuestion
 function showQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
@@ -96,6 +101,7 @@ function showQuestion(question) {
     })
 }
 
+//function for resetState
 function resetState() {
     nextBtn.classList.add('hide')
     while (answerBtnsElement.firstChild) {
@@ -105,6 +111,7 @@ function resetState() {
 
 }
 
+//function for selectAnswer
 function selectAnswer(e) {
     const selectedBtn = e.target
     let correct = selectedBtn.dataset.correct
@@ -121,9 +128,11 @@ function selectAnswer(e) {
         questionContainerElement.classList.add('hide')
         submitButton.classList.remove('hide')
         quizForm.classList.remove('hide')
+        
     }
 }
 
+//function for setStatusClass
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -133,10 +142,10 @@ function setStatusClass(element, correct) {
         element.classList.add('incorrect')
     }
 }
-
+//function for clearStatusClass
 function clearStatusClass(element) {
     element.classList.add('correct')
-    //element.classList.add('incorrect')
+    
 }
 
 //Look inside the localStorage for key name "highscores",

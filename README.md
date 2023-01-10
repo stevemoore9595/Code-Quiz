@@ -2,6 +2,8 @@
 
 ## Description
 
+I created my Code Quiz Challenge with qestions about coding. For those that don't know anything about coding, they will see some easy and more difficult questions to give them a variety.
+
 ## User Story
 
 AS A coding boot camp student
