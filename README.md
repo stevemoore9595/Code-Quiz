@@ -31,3 +31,5 @@ The deployed application can be found at this link:
 ## License
 
 Please refer to the LICENSE in the repository
+
+## Screenshot
