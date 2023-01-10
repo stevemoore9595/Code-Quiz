@@ -26,7 +26,7 @@ THEN I can save my initials and my score
 
 ## Deployed Application
 
-The deployed application can be found at this link:
+The deployed application can be found at this link: https://stevemoore9595.github.io/Code-Quiz/
 
 ## License
 
